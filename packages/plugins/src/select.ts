@@ -1,5 +1,5 @@
 import { GraphQLResolveInfo } from 'graphql';
-import { DMMF } from '@prisma/client/runtime';
+import { DMMF } from '@prisma/client/runtime/library';
 // @ts-ignore
 import graphqlFields from 'graphql-fields';
 
@@ -54,7 +54,7 @@ export class PrismaSelect {
           | { [key: string]: boolean }
           | ((select: any) => { [key: string]: boolean });
       };
-      dmmf?: Omit<DMMF.Document, 'schema'>[];
+      dmmf?: Pick<DMMF.Document, 'datamodel'>[];
     },
   ) {}
 

@@ -1,4 +1,4 @@
-import { DMMF } from '@prisma/client/runtime';
+import { DMMF } from '@prisma/client/runtime/library';
 import { GraphQLSchema } from 'graphql';
 import { writeFileSync } from 'fs';
 
